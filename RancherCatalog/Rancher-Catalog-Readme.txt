@@ -1,0 +1,1 @@
+http://docs.rancher.com/rancher/v1.5/en/catalog/private-catalog/
