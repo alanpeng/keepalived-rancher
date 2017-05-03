@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Substitute variables in config file.
-/bin/sed -i "s/{{VIRTUAL_IP}}/${VIRTUAL_IP}/" /etc/keepalived/keepalived.conf
-/bin/sed -i "s/{{CHECK_PORT}}/${CHECK_PORT}/" /etc/keepalived/keepalived.conf
-/bin/sed -i "s/{{VRID}}/${VRID}/" /etc/keepalived/keepalived.conf
-/bin/sed -i "s/{{INTERFACE}}/${INTERFACE}/" /etc/keepalived/keepalived.conf
-/bin/sed -i "s/{{NETMASK_BIT}}/${NETMASK_BIT}/" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{VIRTUAL_IP}}/${VIRTUAL_IP}/g" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{CHECK_PORT}}/${CHECK_PORT}/g" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{VRID}}/${VRID}/g" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{INTERFACE}}/${INTERFACE}/g" /etc/keepalived/keepalived.conf
+/bin/sed -i "s/{{NETMASK_BIT}}/${NETMASK_BIT}/g" /etc/keepalived/keepalived.conf
 
 # Make sure we react to these signals by running stop() when we see them - for clean shutdown
 # And then exiting
