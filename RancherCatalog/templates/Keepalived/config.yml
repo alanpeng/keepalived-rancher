@@ -1,0 +1,5 @@
+name: "Keepalived for Rancher"
+description: |
+  Keepalived for Rancher HA-Proxy Loadbalancer
+version: 1.0
+category: Clustering

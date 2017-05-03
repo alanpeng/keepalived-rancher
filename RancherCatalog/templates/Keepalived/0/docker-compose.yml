@@ -1,0 +1,16 @@
+version: '2'
+services:
+  keepalived:
+    cap_add:
+    - NET_ADMIN
+    - NET_BROADCAST
+    image: alanpeng/rancher-keepalived:1.0
+    environment:
+      VIRTUAL_IP: "${virtual_ip}"
+      CHECK_PORT: "${check_port}"
+      VRID: '150'
+      INTERFACE: "${network_interface}"
+      NETMASK_BIT: "${netmask_bit}"
+    stdin_open: true
+    network_mode: host
+    tty: true
